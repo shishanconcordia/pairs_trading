@@ -4,7 +4,7 @@ import yfinance as yf
 import seaborn as sns
 import numpy as np
 import pandas as pd
-import pyfolio as pf
+# import pyfolio as pf
 import statsmodels
 import statsmodels.api as sm
 import statsmodels.tsa.stattools as ts 
