@@ -39,9 +39,9 @@ def find_pairs(dt, p_v = 0.001, name = 'nasdaq_stock_pairs.json'):
 
 def test_two_pairs(x_1, x_2):
 
-    X = (x_1)
+    X = x_1
     X = sm.add_constant(X)
-    model = sm.OLS((x_2), X)
+    model = sm.OLS(x_2, X)
     lm_rst = model.fit()
     result = adfuller(lm_rst.resid.values)
     return result[1], lm_rst
