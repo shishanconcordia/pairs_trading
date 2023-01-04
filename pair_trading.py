@@ -43,8 +43,8 @@ def test_two_pairs(x_1, x_2):
     X = sm.add_constant(X)
     model = sm.OLS(x_2, X)
     lm_rst = model.fit()
-    result = adfuller(lm_rst.resid.values)
-    return result[1], lm_rst
+    result = adfuller(lm_rst.resid.values, regression = 'n')
+    return result[1], lm_rst, result[0]
 
 
 def show_pairs(x1, x2, start= '2022-06-01', end= '2022-12-01', intv = '1h', plotting = False):
