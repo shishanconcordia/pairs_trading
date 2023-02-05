@@ -11,7 +11,7 @@ import statsmodels.tsa.stattools as ts
 import seaborn as sns
 from statsmodels.tsa.stattools import adfuller
 import json
-
+from statsmodels.tsa.vector_ar.vecm import coint_johansen
 
 def find_pairs(dt, p_v = 0.001, name = 'nasdaq_stock_pairs.json'):
     rst = {}
